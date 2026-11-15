@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScamShield</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header><span class="logo">🛡️ ScamShield</span></header>
+
+    <div id="loading" class="state"><p>Analyzing this page...</p></div>
+
+    <div id="result" class="state hidden">
+      <div id="verdict-badge" class="verdict-badge"><span id="verdict-text">--</span></div>
+
+      <div class="score-row"><span>Risk score</span><span id="score-text">0</span></div>
+      <div class="score-bar-bg"><div id="score-bar-fill" class="score-bar-fill"></div></div>
+
+      <p class="hostname" id="hostname-text"></p>
+
+      <div class="reasons">
+        <h4>Why this verdict</h4>
+        <ul id="reasons-list"></ul>
+      </div>
+
+      <div class="actions">
+        <button id="btn-trust" class="btn">✓ Trust this site</button>
+        <button id="btn-report" class="btn btn-danger">⚑ Report as scam</button>
+      </div>
+      <p class="source" id="source-text"></p>
+    </div>
+
+    <div id="empty" class="state hidden">
+      <p>Nothing to analyze here. Browser pages aren't scanned, or the page needs a refresh.</p>
+    </div>
+
+    <div class="settings">
+      <label><input type="checkbox" id="opt-warn" /> Show warnings on risky pages</label>
+      <label><input type="checkbox" id="opt-age" /> Check domain age (sends domain to rdap.org)</label>
+      <div class="update-row">
+        <span id="status-text">Rules: …</span>
+        <button id="btn-update" class="link">Update now</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

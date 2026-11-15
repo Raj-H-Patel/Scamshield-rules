@@ -1,0 +1,34 @@
+{
+  "version": 2026101200,
+  "trustedDomains": [
+    "google.com","google.co.in","google.co.uk","youtube.com","gmail.com",
+    "microsoft.com","live.com","office.com","microsoftonline.com","bing.com",
+    "apple.com","icloud.com","amazon.com","amazon.in","amazon.co.uk",
+    "facebook.com","instagram.com","whatsapp.com","meta.com",
+    "linkedin.com","twitter.com","x.com","reddit.com","quora.com",
+    "github.com","gitlab.com","stackoverflow.com","stackexchange.com",
+    "wikipedia.org","mozilla.org","cloudflare.com",
+    "netflix.com","spotify.com","paypal.com","dropbox.com","adobe.com","zoom.us",
+    "yahoo.com","openai.com","chatgpt.com","anthropic.com","claude.ai",
+    "flipkart.com","paytm.com","phonepe.com","zomato.com","swiggy.com",
+    "irctc.co.in","sbi.co.in","bank.sbi","onlinesbi.sbi","hdfcbank.com","icicibank.com",
+    "coinbase.com","binance.com"
+  ],
+  "blockedDomains": [],
+  "brandTokens": [
+    "paypal","google","microsoft","apple","amazon","facebook","instagram",
+    "netflix","whatsapp","paytm","phonepe","flipkart","sbi","hdfc","icici",
+    "irctc","linkedin","coinbase","binance"
+  ],
+  "suspiciousTlds": ["tk","ml","ga","cf","gq","top","xyz","click","zip","work","rest","icu"],
+  "model": {
+    "note": "Hand-set starter weights. Replace with weights trained on a real dataset.",
+    "bias": -4.0,
+    "weights": {
+      "urlLen": 1.5, "digitRatio": 3.0, "hyphens": 1.5, "subdepth": 1.5,
+      "isIp": 3.5, "noHttps": 1.0, "badTld": 1.5, "brandInDomain": 3.5,
+      "typosquat": 3.5, "hasPassword": 0.8, "passwordExternal": 3.5,
+      "keywordHits": 2.5, "extLinkLogin": 1.5, "newDomain": 2.5, "titleBrandMismatch": 3.0
+    }
+  }
+}

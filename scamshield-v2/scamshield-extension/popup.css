@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  width: 320px;
+  background: #12141c;
+  color: #f0f0f5;
+}
+
+.container {
+  padding: 16px;
+}
+
+header {
+  margin-bottom: 12px;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.state.hidden {
+  display: none;
+}
+
+#loading p {
+  text-align: center;
+  color: #9a9ab0;
+  padding: 20px 0;
+}
+
+.verdict-badge {
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.verdict-badge.Safe { background: rgba(46, 204, 113, 0.15); color: #2ecc71; }
+.verdict-badge.Suspicious { background: rgba(243, 156, 18, 0.15); color: #f39c12; }
+.verdict-badge.Dangerous { background: rgba(231, 76, 60, 0.15); color: #e74c3c; }
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #c3c3d1;
+  margin-bottom: 4px;
+}
+
+.score-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #262837;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.score-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2ecc71, #f39c12, #e74c3c);
+  transition: width 0.4s ease;
+}
+
+.hostname {
+  font-size: 12px;
+  color: #7f8195;
+  margin-bottom: 12px;
+  word-break: break-all;
+}
+
+.reasons h4 {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #d3d3e0;
+}
+
+.reasons ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reasons li {
+  font-size: 12px;
+  color: #b3b3c6;
+  padding-left: 14px;
+  position: relative;
+}
+
+.reasons li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #e74c3c;
+}
+
+.source {
+  margin-top: 12px;
+  font-size: 10px;
+  color: #5c5e70;
+  text-align: right;
+}
+
+.actions { display: flex; gap: 8px; margin-top: 12px; }
+.btn {
+  flex: 1; cursor: pointer; border: 1px solid #3a3d52; background: #1b1e2b;
+  color: #d3d3e0; border-radius: 6px; padding: 7px 6px; font-size: 12px;
+}
+.btn:hover { background: #262837; }
+.btn-danger { border-color: #7a2f2a; color: #e87a70; }
+.settings { margin-top: 14px; padding-top: 10px; border-top: 1px solid #262837; font-size: 11px; color: #9a9ab0; }
+.settings label { display: block; margin-bottom: 5px; cursor: pointer; }
+.update-row { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.link { background: none; border: 0; color: #6ea8fe; cursor: pointer; font-size: 11px; }
+.link:disabled { color: #5c5e70; cursor: default; }
